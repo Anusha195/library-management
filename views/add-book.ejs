@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="/static/css/addbook.css"> 
+</head>
+<body>
+    <div class="main-content">
+        <h2>Add a New Book</h2>
+        <form id="add-book-form" method="POST" action="/add-book">
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" required>
+            
+            <label for="bookId">Book ID:</label>
+            <input type="text" id="bookId" name="bookId" required>
+            
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            
+            <button type="submit" class="btn">Add Book</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Vishnu Library <img src="/static/img/OIP.jpeg" alt="Logo" ></h1> 
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" onclick="loadContent('/add-book')">Add Book</a>
+            <a href="#" onclick="loadContent('/book-report')">Book Report</a>
+            <a href="#" onclick="loadContent('/book-request')">Book Request</a>
+            <a href="#" onclick="loadContent('/add-person')">Add Person</a>
+            <a href="#" onclick="loadContent('/student-report')">Student Report</a>
+            <a href="#" onclick="loadContent('/issue-book')">Issue Book</a>
+            <a href="#" onclick="loadContent('/issue-report')">Issue Report</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="main-content" id="main-content">
+            <p>Welcome to the admin dashboard. Please select an option from the sidebar.</p>
+        </div>
+    </div>
+
+    <script>
+        function loadContent(url) {
+            $.get(url, function(data) {
+                $('#main-content').html(data);
+            });
+        }
+    </script>
+</body>
+</html>

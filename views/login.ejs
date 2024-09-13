@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="/static/img/logobig.jpg" alt="Logo" class="logo"><h1>Vishnu Institute of Technology </h1>
+    </div>
+    <div class="container">
+        <!-- Employee Login Section -->
+        <div class="login-section employee">
+            <h2>Employee Login</h2>
+            <form action="/employee" method="POST">
+                <label for="emp-username">Username:</label>
+                <input type="text" id="emp-username" name="username" required>
+                <label for="emp-password">Password:</label>
+                <input type="password" id="emp-password" name="password" required>
+                <button type="submit" class="login-button employee-btn">Login</button>
+            </form>
+        </div>
+        
+        <!-- Student/Teacher Login Section -->
+        <div class="login-section student">
+            <h2>Student/Teacher Login</h2>
+            <form action="/student-teacher" method="POST">
+                <label for="stu-username">Username:</label>
+                <input type="text" id="stu-username" name="username" required>
+                <label for="stu-password">Password:</label>
+                <input type="password" id="stu-password" name="password" required>
+                <button type="submit" class="login-button student-btn">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

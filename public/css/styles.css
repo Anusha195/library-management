@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 img {
+    width: 50px; /* Adjust logo size */
+    height: 50px;
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(121, 97, 148); /* Dark red */
+    width: 200px;
+    padding: 0;
+}
+
+.sidebar a {
+    background-color: rgb(121, 97, 148); /* Sidebar button background */
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid white;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: rgb(121, 97, 148); /* Darker red on hover */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+}
+

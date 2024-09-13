@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Requests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .accept-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .accept-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Book Requests</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Person Name</th>
+                <th>Branch</th>
+                <th>Book ID</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (bookRequests.length > 0) { %>
+                <% bookRequests.forEach(function(request) { %>
+                    <tr>
+                        <td><%= request.personName %></td>
+                        <td><%= request.branch %></td>
+                        <td><%= request.bookId %></td>
+                        <td>
+                            <form method="POST" action="/acceptRequest/<%= request.id %>">
+                                <button type="submit" class="accept-button">Accept</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4">No book requests at the moment.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

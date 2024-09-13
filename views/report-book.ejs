@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Report</title>
+    <link rel="stylesheet" href="/static/css/reportbook.css">
+</head>
+<body>
+<h2>Issued Books</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Person Name</th>
+            <th>Book ID</th>
+            <th>Issued At</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (issuedBooks && issuedBooks.length > 0) { %>
+            <% issuedBooks.forEach(function(book) { %>
+                <tr>
+                    <td><%= book.personName %></td>
+                    <td><%= book.bookId %></td>
+                    <td><%= book.issuedAt.toDate().toDateString() %></td>
+                    <td>
+                        <form action="/returnBook/<%= book.id %>" method="POST">
+                            <button type="submit">Return</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        <% } else { %>
+            <tr>
+                <td colspan="4">No issued books found.</td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+</body>
+ 

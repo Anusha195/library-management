@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Report</title>
+    <link rel="stylesheet" href="/static/css/bookreport.css">
+</head>
+<body>
+    <h3 style="text-align: center;">Book Report</h3>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (books.length > 0) { %>
+                <% books.forEach(function(book) { %>
+                    <tr>
+                        <td><%= book.bookId %></td>
+                        <td><%= book.bookName %></td>
+                        <td><%= book.author %></td>
+                        <td><%= book.available %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4">No books found</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

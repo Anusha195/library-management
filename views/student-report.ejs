@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report</title>
+    <link rel="stylesheet" href="/static/css/bookreport.css"> 
+</head>
+<body>
+    <h3 style="text-align: center;">Student Report</h3>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Type</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <% if (students.length > 0) { %>
+                <% students.forEach(function(student) { %>
+                    <tr>
+                        <td><%= student.username %></td>
+                        <td><%= student.email %></td>
+                        <td><%= student.type %></td> 
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="5">No students found</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

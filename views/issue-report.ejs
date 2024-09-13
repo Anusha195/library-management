@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Report</title>
+    <link rel="stylesheet" href="/static/css/reportbook.css">
+</head>
+<body>
+    <h3 style="text-align: center;">Issue Report</h3>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>User Name</th>
+                <th>Branch</th>
+                <th>Issued Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (issuebooks.length > 0) { %>
+                <% issuebooks.forEach(function(issuebook) { %>
+                    <tr>
+                        <td><%= issuebook.bookId %></td>
+                        <td><%= issuebook.username %></td>
+                        <td><%= issuebook.branch %></td>
+                        <td><%= new Date(issuebook.issuedAt._seconds * 1000).toLocaleDateString() %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4">No records found</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
