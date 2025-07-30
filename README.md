@@ -36,16 +36,14 @@ A full-stack web application built using **Node.js**, **Firebase Firestore**, an
 
 ---
 
-## 🔧 Project Structure
-
 library-management-system/
-├── public/ # CSS, JS, images
-├── routes/ # Express route files
-├── views/ # EJS template files
-├── key.json # Firebase SDK & initialization
-├── app.js # Main server file
-├── package.json # Node dependencies
-└── README.md # Project documentation
+├── public/            # Static assets (CSS, JS, images)
+├── routes/            # Express route handlers
+├── views/             # EJS template files
+├── key.json           # Firebase configuration
+├── app.js             # Main application file
+├── package.json       # Project dependencies
+└── README.md          # Project documentation
 
 git clone https://github.com/Anusha195/library-management
 cd library-management-system
