@@ -12,16 +12,14 @@ A full-stack web application built using **Node.js**, **Firebase Firestore**, an
 - Secure sessions with logout functionality
 
 ### 👨‍🎓 Student & Teacher Panel
-- Search books by title or author
 - Check real-time availability
 - Request to borrow books
 - Report issues related to issued books
 
 ### 🧑‍💼 Employee (Admin) Panel
 - View and manage book requests
-- Approve or reject borrowing requests
+- Approve borrowing requests
 - Issue or return books
-- Track book inventory
 - View and resolve reported issues
 
 ---
