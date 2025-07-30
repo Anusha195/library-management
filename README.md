@@ -38,10 +38,10 @@ A full-stack web application built using **Node.js**, **Firebase Firestore**, an
 ##Folder Structure
 
 library-management-system/
--public/            # Static assets (CSS, JS, images)
--views/             # EJS template files
--key.json           # Firebase configuration
--app.js             #  Express route handlers
+-public/            # Static assets (CSS, JS, images),
+-views/             # EJS template files.
+-key.json           # Firebase configuration.
+-app.js             #  Express route handlers.
 -package.json       # Project dependencies README.md          
 
 
