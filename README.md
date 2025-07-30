@@ -36,7 +36,7 @@ A full-stack web application built using **Node.js**, **Firebase Firestore**, an
 
 ---
 ##Folder Structure
-
+```
 library-management-system/
 ├── public/            # Static assets (CSS, JS, images)
 ├── routes/            # Express route handlers
@@ -47,7 +47,7 @@ library-management-system/
 └── README.md          # Project documentation
 
 
----
+```
 git clone https://github.com/Anusha195/library-management
 cd library-management-system
 npm install
